@@ -185,7 +185,7 @@ classdef LightCrafter4500 < handle
             end
 
             % Check all patterns for a consistent bit depth and color.
-            [~, ~, bitDepth, ledSelect] = lcrGetPatLutItem(0);
+            [~, ~, bitDepth, ledSelect] = lcrGetPatLutItem(0); %Usage: [trigType, patNum, bitDepth, ledSelect, invertPat, insertBlack, bufSwap, trigOutPrev] = lcrGetPatLutItem(index)
             numPatterns = lcrGetPatternConfig();
             for i = 2:numPatterns
                 [~, ~, d, l] = lcrGetPatLutItem(i - 1);
